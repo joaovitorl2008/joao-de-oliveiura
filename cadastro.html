@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Livraria da Mata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro Livraria da Mata</h1>
+    <input type="text" id="nome" placeholder="Nome">
+    <br><br>
+    <input type="email" id="email" placeholder="E-mail">
+    <br><br>
+    <input type="password" id="senha" placeholder="Senha">
+    <br><br>
+    <input type="text" id="endereco" placeholder="Endereço">
+    <br><br>
+    <input type="text" id="cpf" placeholder="CPF">
+    <br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <script>
+        function cadastrar() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
+            let endereco = document.getElementById("endereco").value;
+            let cpf = document.getElementById("cpf").value;
+            if (nome == "" || email == "" || senha == "" || endereco == "" || cpf == "") {
+                alert("Preencha todos os campos!");
+                return;
+            }
+            let dados =
+                "CADASTRO SPOTIFY\n\n" +
+                "Nome: " + nome + "\n" +
+                "E-mail: " + email + "\n" +
+                "Senha: " + senha + "\n" +
+                "Endereço: " + endereco + "\n" +
+                "CPF: " + cpf + "\n" +
+                "Imagem: " + (imagem ? imagem.name : "Nenhuma imagem") + "\n";
+            let arquivo = new Blob([dados], { type: "text/plain" });
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(arquivo);
+            link.download = "cadastro.txt";
+            link.click();
+            alert("Cadastro salvo em TXT!");
+        }
+    </script>
+</body>
+</html>

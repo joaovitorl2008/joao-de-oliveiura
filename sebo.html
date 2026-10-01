@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebo Online - Livraria da Mata</title>
+</head>
+<body>
+    <header>
+        <h1>Sebo Acadêmico</h1>
+        <p>Usuário Conectado: <strong>João Oliveira (Aluno Logado)</strong></p>
+        <hr>
+    </header>
+    <section>
+        <h2>Desapegar de um Livro</h2>
+        <p>Preencha os dados abaixo para disponibilizar seu livro para doação ou troca</p>
+        <form>
+                <label for="tipo">Modalidade:</label><br>
+                <select id="tipo">
+                    <option value="troca">Quero Trocar</option>
+                    <option value="doacao">Quero Doar</option>
+                    <option value="ambos">Aceito Ambos</option>
+                </select>
+            </p>
+            <p>
+                <label for="estado">Estado do Livro:</label><br>
+                <select id="estado">
+                    <option>Excelente</option>
+                    <option>Bom</option>
+                    <option>Gasto</option>
+                </select>
+            </p>
+            <button type="submit">Anunciar Livro</button>
+        </form>
+    </section>
+    <hr> 
+    <section>
+        <h2>Livros Disponíveis na Comunidade</h2>
+        <p>Veja o que os outros alunos estão desapegando:</p>
+        <article>
+            <h3>Diário de um Banana</h3>
+            <ul>
+                <li><strong>Modalidade:</strong> DOAÇÃO</li>
+                <li><strong>Autor:</strong>Jeff Kinney</li>
+                <li><strong>Estado:</strong> Bom</li>
+                <li><strong>Dono(a):</strong> Gabriel Melo</li>
+            </ul>
+            <button type="button">Tenho Interesse</button>
+        </article>
+        <br>
+        <article>
+            <h3>Peter Pan</h3>
+            <ul>
+                <li><strong>Modalidade:</strong> TROCA</li>
+                <li><strong>Autor:</strong> J. M. Barrie</li>
+                <li><strong>Estado:</strong> Excelente</li>
+                <li><strong>Dono(a):</strong> Gabriel Netto</li>
+            </ul>
+            <button type="button">Propor Troca</button>
+        </article>
+    </section>
+    <hr>
+    <footer>
+        <p>© 2026 Sebo Acadêmico - João Oliveira e Henrique da Mata</p>
+    </footer>
+</body>
+</html>
